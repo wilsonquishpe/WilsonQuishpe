@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WilsonQuishpe.Registro"
+              Title="Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalOptions="Start" x:Name="lblEstudiante" FontSize="20" TextColor="Blue"/>
+
+            <Grid Padding="10,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Nombre"  />
+                <Entry Grid.Row="0" Grid.Column="1" x:Name="txtNombre"/>
+                <Label Grid.Row="1" Grid.Column="0"  Text="Cuota Inicial"  />
+                <Entry Grid.Row="1" Grid.Column="1"  x:Name="txtCInicial" Keyboard="Numeric"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Pago Mensual" HorizontalOptions="Start"  />
+                <Entry Grid.Row="2"  Grid.Column="1" x:Name="txtPago" IsReadOnly="True"/>
+
+                <Button Grid.Row="3"  Grid.Column="1" x:Name="btnCalcularPM"  Text="Calcular" Clicked="btnCalcularPM_Clicked"/>
+
+            </Grid>
+
+            <Button x:Name="btnSave"  Text="Guardar" Clicked="btnSave_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
